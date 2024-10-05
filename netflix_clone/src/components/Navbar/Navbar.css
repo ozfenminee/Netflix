@@ -1,0 +1,20 @@
+.navbar {
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 10px 20px;
+
+  }
+  
+  .navbar-left {
+    margin-right: 1; /* Menüye boşluk bırakmak için */
+  }
+  
+  .navbar-left-img {
+    width: 100px; /* Küçük bir logo boyutu */
+    height: auto;
+  }
+
+  
+  
