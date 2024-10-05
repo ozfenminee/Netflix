@@ -1,20 +1,96 @@
+/* Navbar.css */
+
 .navbar {
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    padding: 10px 20px;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 5px 15px; /* Daha az padding kullanarak boyutu küçültme */
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(20, 20, 20, 0.9); /* Arka plan rengini biraz daha belirgin hale getirme */
+  z-index: 999;
+}
 
-  }
-  
-  .navbar-left {
-    margin-right: 1; /* Menüye boşluk bırakmak için */
-  }
-  
-  .navbar-left-img {
-    width: 100px; /* Küçük bir logo boyutu */
-    height: auto;
-  }
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
 
-  
-  
+.navbar-left-img {
+  width: 80px; /* Resim boyutunu küçültme */
+  height: auto;
+  margin-right: 15px; /* Sağ boşluğu azaltma */
+}
+
+.navbar-left ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar-left ul li {
+  margin-right: 15px; /* Boşluğu azaltma */
+  color: white;
+  cursor: pointer;
+  font-size: 0.9rem; /* Yazı boyutunu küçültme */
+}
+
+.navbar-left ul li:hover {
+  text-decoration: underline;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-right p {
+  margin: 0 10px; /* Sağ ve sol boşluğu azaltma */
+  color: white;
+  font-size: 0.9rem; /* Yazı boyutunu küçültme */
+}
+
+.icons {
+  color: white;
+  margin-left: 10px; /* Soldan boşluğu azaltma */
+}
+
+.bell-icon {
+  margin-right: 15px; /* Sağdan boşluğu azaltma */
+}
+
+.navbar-profile {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.navbar-profile .icons {
+  margin-left: 5px;
+  color: white;
+}
+
+.dropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: #141414;
+  padding: 5px; /* Daha az padding kullanarak boyutu küçültme */
+  color: white;
+  border-radius: 4px;
+  white-space: nowrap;
+  z-index: 1000;
+}
+
+.dropdown p {
+  margin: 0;
+  cursor: pointer;
+  font-size: 0.9rem; /* Yazı boyutunu küçültme */
+}
+
+.dropdown p:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,41 @@
+.titile-cards {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.titile-cards h2 {
+    margin-bottom: 8px;
+}
+
+.card-list {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto; /* Yana kaydırma çubuğu ekle */
+    white-space: nowrap; /* Kartların yan yana dizilmesini sağla */
+}
+
+.card-list .card {
+    display: flex;
+    flex-direction: column; /* Dikey hizala */
+    height: 300px; /* Kart yüksekliğini sabitleyin */
+    width: 300px; /* Kart genişliğini artırın */
+    border-radius: 8px; /* Kart köşe yuvarlama */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Kart gölgesi */
+    padding: 10px; /* İçerik için dolgu */
+}
+
+.card-list img {
+   /* Resmi kart genişliğine yay */
+    height: 180px; /* Sabit yükseklik ayarlayın */
+    border-radius: 4px;
+    cursor: pointer;
+    object-fit: cover; /* Resmi kesip kart boyutuna uydur */
+}
+
+.card-title {
+    margin-top: auto; /* Kartın alt kısmına itme */
+    font-weight: bold; /* Başlık kalın yazı ile */
+}
+.card-list::-webkit-scrollbar{
+    display: none;
+}
