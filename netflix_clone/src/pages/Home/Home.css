@@ -42,7 +42,7 @@
 .hero-caption p {
     max-width: 700px;
     margin-bottom: 20px;
-    font-size: 1.5rem;
+   font-size: medium;
     line-height: 1.8;
     font-weight: 300;
     z-index: 10;
@@ -111,4 +111,7 @@ button {
 .hero::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0.1);
     /* Kaydırma çubuğunun arka plan rengi */
+}
+.more-cards{
+    padding-left: 6%;
 }

@@ -5,6 +5,7 @@ import hero_banner from '../../assets/hero_banner.jpg';
 import hero_title from '../../assets/hero_title.jpg';
 import { FaPlay, FaInfoCircle } from 'react-icons/fa';
 import TitileCard from '../../components/TitileCard/TitileCard';
+import Footer from '../../components/Footer/Footer';
 
 export const Home = () => {
   return (
@@ -27,7 +28,16 @@ export const Home = () => {
           </div>
           <TitileCard />
         </div>
+        <div className='more-cards'>
+        <TitileCard title={"Blockbuster Movies"}/>
+        <TitileCard title={"Only on Netflix"}/>
+        <TitileCard title={"Upcoming"}/>
+        <TitileCard title={"Top Pics for You"}/>
+     
       </div>
+      <Footer/>
+      </div>
+      
     </div>
   );
 }
