@@ -3,6 +3,7 @@ import './Navbar.css';
 import logo from '../../assets/netflix_logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faBell, faCaretDown, faUser } from '@fortawesome/free-solid-svg-icons';
+import { logout } from '../../firebase';
 
 export const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -11,19 +12,15 @@ export const Navbar = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-  // Ekrandaki herhangi bir yere tıklanıldığında dropdown'ı kapatmak için useEffect kullanıyoruz.
   useEffect(() => {
     const handleClickOutside = (event) => {
-      // Eğer tıklanan yer navbar-profile alanı değilse dropdown'ı kapat
       if (!event.target.closest('.navbar-profile')) {
         setIsDropdownOpen(false);
       }
     };
 
-    // Document üzerinde tıklamaları dinlemek için bir event listener ekliyoruz.
     document.addEventListener('mousedown', handleClickOutside);
 
-    // Component unmount olduğunda event listener'ı kaldırıyoruz.
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
@@ -47,11 +44,11 @@ export const Navbar = () => {
         <p>Children</p>
         <FontAwesomeIcon icon={faBell} className='icons bell-icon' />
         <div className='navbar-profile' onClick={toggleDropdown}>
-          <FontAwesomeIcon icon={faUser} className='icons' /> {/* Profile icon */}
-          <FontAwesomeIcon icon={faCaretDown} className='icons' /> {/* Caret down icon */}
+          <FontAwesomeIcon icon={faUser} className='icons' />
+          <FontAwesomeIcon icon={faCaretDown} className='icons' />
           {isDropdownOpen && (
             <div className='dropdown'>
-              <p>Sign Out of Netflix</p> {/* Dropdown menüsü */}
+              <p onClick={logout}>Sign Out of Netflix</p>
             </div>
           )}
         </div>
